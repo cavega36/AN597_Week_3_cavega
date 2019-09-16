@@ -1,0 +1,24 @@
+---
+title: "cavega_OriginalHomeworkCode_02"
+author: "C. Vega"
+date: "9/16/2019"
+output: html_document
+---
+
+# This is the code for [Homework 2](https://fuzzyatelin.github.io/bioanth-stats/homework-02.html)
+## Week three of AN597. [Modules 6](https://fuzzyatelin.github.io/bioanth-stats/module-06/module-06.html) and [Module 7](https://fuzzyatelin.github.io/bioanth-stats/module-07/module-07.html).
+
+# The premise for this homework is: 
+> Every Saturday morning, at the same time, a primatologist goes and sits in the forest to listen for titi monkey calls, counting the number of calls they hear in a 2 hour window from 5am to 7am. Based on previous knowledge, she believes that the mean number of calls she will hear in that time is exactly 15. Let X represent the appropriate Poisson random variable of the number of calls heard in each monitoring session.
+
+## Question 1: What is the probability that she will hear more than 8 calls during any given session?
+### Quotation explaining how you are conceptualizing and making sense of the question
+``` {r}
+x <- 5*8
+x
+```
+
+```{r}
+
+```
+
