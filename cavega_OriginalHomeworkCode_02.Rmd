@@ -44,13 +44,12 @@ x
 
 ***
 
-# CHALLENGES
-## This is the code for [Modules 6](https://fuzzyatelin.github.io/bioanth-stats/module-06/module-06.html) and [Module 7](https://fuzzyatelin.github.io/bioanth-stats/module-07/module-07.html).
+# Peer Commentary (5 Challenges)
 
 ***
 
-## Challenge 1
-```{r}
-
-```
-
+1. 
+2. 
+3. 
+4. 
+5. 
