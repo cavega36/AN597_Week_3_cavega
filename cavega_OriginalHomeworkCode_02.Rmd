@@ -11,35 +11,52 @@ output: html_document
 > Every Saturday morning, at the same time, a primatologist goes and sits in the forest to listen for titi monkey calls, counting the number of calls they hear in a 2 hour window from 5am to 7am. Based on previous knowledge, she believes that the mean number of calls she will hear in that time is exactly 15. Let X represent the appropriate Poisson random variable of the number of calls heard in each monitoring session.
 
 ## Question 1: What is the probability that she will hear more than 8 calls during any given session?
-### (Quotation explaining how you are conceptualizing and making sense of the question)
+### For this I am using the ppois function, where lambda is the average, and the variable is the first number in the parentheses, i will use the call >lower.tail=FALSE to look at the probability of getting a number greater than 8
+### My answer shows that there is a 96.3% chance that there will be more than 8 calls in a two-hour window.
 ``` {r}
-x <- 5*8
-x
+ppois(8, lambda = 15, lower.tail = FALSE)
 ```
 ## Question 2: What is the probability that she will hear no calls in a session?
-### Explanation of thinking for Question 2
+### Here I am using ppois again to test the probability that she will not hear any calls. I am not including >lower.tails because it is automatically set to TRUE in this function
+### My answers shows that there is a 0.00003059% chance of hearing 0 calls in a two hour session. 
 ```{r}
-
+ppois(0, lambda = 15)
 ```
 
 ## Question 3: What is the probability that she will hear exactly 3 calls in a session?
+### The probability of hearing exactly 3 calls is 0.017% 
 ```{r}
-
+dpois(x = 3, lambda = 15)
 ```
 
 ## Question 4: Plot the relevant Poisson mass function over the values in range 0 ≤ x ≤ 30.
+### I will be using code from Module 8 to make a plot of the probability of values from 0 to 30
+### Originally tried this but it is wrong:
+    > barplot(ppois(x, lambda=l), 
+          ylim=0:1, space=0, names.arg = x, xlab = "Number of Calls", 
+          ylab= "Probability", main="Question 4: Poisson Mass Function for Titi Calls")
+          
 ```{r}
+x <- 0:30
+l <- 15
 
+barplot(dpois(x=x,lambda=l),  names.arg=x,space=0,xlab="x",ylab="Probability",main="Question 4: Probability Mass Function for Titi Calls")
 ```
 
 ## Question 5: Simulate 104 results from this distribution (i.e., 2 years of Saturday monitoring sessions).
-```{r}
+### I am using rnorm to simulate 104 observations, with an expected mean of 15 within the interval 0:30. I took the mean of this result (v) to see if it made sense. (It changes every time because it is a new random set of numbers every time.)
 
+```{r}
+v <- rnorm(104, 15)
+mean(v)
 ```
 
 ## Question 6: Plot the simulated results using hist() and use xlim() to set the horizontal limits to be from 0 to 30. How does your histogram compare to the shape of the probability mass function you plotted above?
+### I tried plotting this with the limits from 0:30 as the question asks, but this does not seem like the proper result. 
 ```{r}
+v <- rnorm(104, 15,)
 
+hist(v, xlim = c(0,30), xlab = "Number of Calls", ylab= "Frequency", main = "Question 6: Histogram of Simulated Calls")
 ```
 
 ***
@@ -48,8 +65,8 @@ x
 
 ***
 
-1. 
-2. 
-3. 
-4. 
-5. 
+## 1. I am very unfamiliar with probability, so when I came up with an answer for the first few questions, I did not know what a "reasonable" answer would be. 
+## 2. It took me a lot of time to figure out which code to use to make the graphs
+## 3. Even with the amount of time spent on figuring out the graphs (Questions 4 and 6), I am still not sure that they are correct.
+## 4. I do not think that I correctly bootstrapped/ simulated the results for Questions 5 and 6.
+## 5. It took me a long time to get through Module 8, and I still wouldn't be able to identify when to use each type of distibution plot.
