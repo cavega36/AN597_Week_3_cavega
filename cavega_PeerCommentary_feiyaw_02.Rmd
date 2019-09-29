@@ -61,7 +61,15 @@ hist(v, xlim = c(0,30), xlab = "Number of Calls", ylab= "Frequency", main = "Que
 
 ***
 # Peer Commentary by Feiya Wang
-you did a great job on first 4 question. However, for the uqestion 5 and 6, it have some problem. First, the function rnom() is sued for the normal distribution, we cannot use it for this question since it is a Poisson distribution. you need to change this function. Secondly, question 5 need 104 random value from those distribution, but you only provide 1 values  on your question 5. I suggested that you delete the function mean(v) so we cna get 104 values. Thirdly, the question 5 and 6 ask for the same set of numbers. if you use two random question, you will get different results. I suggest that for question5, and 6, you use the same R shell so that the variable can be continue use whne you graph them. Also, you are getting a results of a narrow graph is because you use the normal distribution function instead of Poisson distribution. The normal distibution in your function assume that standard deviation is actually 1. therefore, as the first suggestion, you may want to change your function for Poisson distribution. 
+>you did a great job on first 4 question. However, for the uqestion 5 and 6, it have some problem. 
+
+First, the function rnom() is used for the normal distribution, we cannot use it for this question since it is a Poisson distribution. you need to change this function. 
+
+Secondly, question 5 need 104 random value from those distribution, but you only provide 1 value on your question 5. I suggest that you delete the function mean(v) so we can get 104 values. 
+
+Thirdly, the question 5 and 6 ask for the same set of numbers. if you use two random function, you will get different results. I suggest that for question 5 and 6, you use the same R shell so that the variable can be use continully when you graph them. 
+
+Also, you are getting a results of a narrow graph(you said the range of graph is weired) is because you use the normal distribution function instead of Poisson distribution. In your function, you assume that standard deviation is actually 1. Therefore, as the first suggestion, you may want to change your function for Poisson distribution. 
 
 
 ***
